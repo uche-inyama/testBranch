@@ -1,0 +1,531 @@
+@import "bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free";
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+body {
+  background-color: #fff;
+}
+
+.static {
+  background-color: #008ecc;
+  display: grid;
+  grid-template-columns: 2fr 9fr 3fr;
+  grid-template-rows: 90px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.left,
+.right {
+  background-color: #7285a5;
+  display: none;
+}
+
+.signup-page {
+  display: grid;
+  grid-template-columns: 1 fr;
+}
+.nav-bar {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+.nav-signup-signin {
+  background-color: #008ecc;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  height: 50px;
+  align-items: center;
+}
+
+.sign-in-field input {
+  height: 30px;
+  width: 230px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
+}
+.sign-in-btns input {
+  height: 30px;
+  width: 100px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
+}
+
+.main_body {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  // grid-template-columns: 3fr 9fr 3fr;
+  grid-template-rows: minmax(100vh, 100vh);
+  position: relative;
+  top: 90px;
+  z-index: 1;
+}
+
+.following_stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+  border-bottom: 1px solid rgb(194, 191, 207);
+  align-items: center;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: #000;
+    text-transform: capitalize;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-left: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  a {
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  span {
+    margin-bottom: 10px;
+  }
+}
+.dropdown-menu {
+  position: relative;
+  top: 30px !important;
+  left: 70px !important;
+  li {
+    text-align: center;
+  }
+}
+.home,
+.profile {
+  margin: 20px 0;
+  width: 50px;
+}
+
+.center {
+  text-align: center;
+  // overflow-y: scroll;
+  // width: 100%;
+}
+.center_image {
+  border-bottom: 1px solid rgb(194, 191, 207);
+  padding: 30px 0 30px 20px;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+ul.center_image {
+  display: flex;
+  align-items: center;
+}
+
+.center_image li {
+  margin-left: 10px;
+  a {
+    color: #000;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}
+.right .who_to_follow {
+  ul {
+    padding-left: 20px;
+    margin-top: 20px;
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.logo-signup-signin {
+  padding-left: 50px;
+}
+.logo .users-wtf ul {
+  padding-left: 20px;
+}
+.logo {
+  display: grid;
+  h2 {
+    align-self: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+  }
+}
+
+/** Home page **/
+
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .homepage_image {
+    a {
+      font-family: "Nunito", Arial, Helvetica, sans-serif;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.opinion_form {
+  padding: 20px;
+  border: 1px solid rgb(194, 191, 207);
+  border-radius: 5px;
+}
+
+.opinion_input {
+  width: 90%;
+  height: 40px;
+}
+
+.opinion_label {
+  display: block;
+  text-align: left;
+  padding: 10px 0 10px 40px;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding-left: 35px;
+}
+
+.opinions {
+  text-align: left;
+  font-weight: 400;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.right h4 {
+  padding: 5px 10px;
+}
+.trending {
+  display: flex;
+  flex-direction: column;
+}
+.trending li {
+  padding: 10px 0;
+}
+.users-wtf {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.users-wtf ul {
+  display: flex;
+  flex-direction: column;
+  li {
+    margin-bottom: 10px;
+  }
+  a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+.wtf-and-button {
+  border-bottom: 1px solid rgb(194, 191, 207);
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  height: 77px;
+
+  h1 {
+    width: 100%;
+    padding-left: 20px;
+  }
+  ul li {
+    padding-left: 20px;
+  }
+}
+.who-to-follow {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px;
+  grid-gap: 2px;
+  .author_image_container {
+    img {
+      height: 100%;
+    }
+  }
+  a {
+    font-weight: 400;
+    font-size: 1em;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    align-self: center;
+    text-decoration: none;
+    color: #000;
+  }
+}
+.opinion {
+  margin: 20px 20px 80px 20px;
+}
+form {
+  padding: 20px;
+}
+
+.display_image {
+  height: 300px;
+}
+.image-display {
+  width: 100%;
+  height: 100%;
+}
+.profile_image {
+  height: 170px;
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  .profile-user-info {
+    display: flex;
+    justify-content: center;
+  }
+  .profile-info-text {
+    margin: 20px 0;
+  }
+}
+
+.user-info {
+  margin-right: 10px;
+}
+.user-info h5 {
+  text-align: center;
+}
+
+#follow_form {
+  margin: 10px auto;
+}
+.sign_up_form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 600px;
+  form {
+    align-self: center;
+    justify-self: center;
+    width: 500px;
+    padding-left: 130px;
+    h1 {
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-weight: 700;
+    }
+  }
+  img {
+    // width: 400px;
+    // height: 400px;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+.text-field .form-control {
+  width: 350px;
+  height: 50px;
+}
+.submit {
+  width: 200px;
+  height: 50px;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 50%;
+}
+.user_profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.sign-up-sign-in {
+  display: flex;
+}
+.sign-in-field {
+  margin-right: 10px;
+}
+
+.logo-signup-signin {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+.sign-in-form form {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+.homepage_image {
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #000;
+  }
+}
+.opinions section {
+  align-self: center;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif, Arial, Helvetica;
+  font-size: 1em;
+  font-weight: 500;
+  .opinion-user-text {
+    margin-left: 10px;
+    align-self: center;
+  }
+}
+.opinion_name {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.opinions-text-image,
+.user_opinions {
+  display: flex;
+  border: 1px solid rgb(194, 191, 207);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  .author_image_container {
+    margin-right: 10px;
+  }
+}
+
+.author_image,
+.user_image {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.following-follower {
+  display: flex;
+  justify-content: start;
+}
+.following-follower section {
+  margin: 10px 0 10px 5px;
+}
+.alert-success {
+  background-color: green;
+  color: white;
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+.alert-sucess {
+  color: white;
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+
+.alert-error {
+  background-color: red;
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 400px;
+}
+.alert-danger {
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+
+.form-control {
+  width: 100%;
+}
+.photo {
+  width: 75%;
+}
+
+.photo_label {
+  width: 120px;
+  font-size: 1em;
+  font-weight: 600;
+}
+#error_explanation {
+  margin-bottom: 20px;
+  color: red;
+}
+.error_explanation li {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 576px) {
+  .main_body {
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: minmax(100vh, 100vh);
+  }
+  .left {
+    display: block;
+  }
+  .sign_up_form img {
+    width: 400px;
+    height: 400px;
+  }
+  .center {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 992px) {
+  .main_body {
+    grid-template-columns: 3fr 9fr 3fr;
+    grid-template-rows: minmax(100vh, 100vh);
+  }
+  .left,
+  .right {
+    display: block;
+  }
+  .sign_up_form img {
+    width: 500px;
+    height: 500px;
+  }
+  .center {
+    overflow-y: scroll;
+  }
+}
+
+// @media (min-width: 992px) {
+//   .sign_up_form img {
+//     width: 400px;
+//     height: 400px;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+//   .sign_up_form img {
+//     width: 450px;
+//     height: 450px;
+//   }
+// }
